@@ -10,47 +10,85 @@
   --headline-font: Mooli, san-serif;
 }
 
-.body-container {
+h2 {
+  text-align: center;
+  color: var(--secondary-color);;
+}
+
+h1 {
+  font-family: var(--headline-font);
+  text-align: center;
+  color: var(--dark-color);
+  margin-top: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Main content and sidebar */
+.content-container {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Main content and sidebar */
+  grid-template-columns: 3fr 1fr;
   gap: 1rem;
 }
 
 .review {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rem;
+  display: flex;
   margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
+  gap: 1rem;
 }
 
 .tomatoes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  width: 300px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  border-right: 1px solid var(--gold-color);
+  padding-right: 1rem;
 }
 
-.navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.review-content {
+  flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.navbar li {
-  width: 100%;
-  text-align: center;
+.filters {
+  border: 1px solid var(--gold-color);
+  padding: 1rem;
+  font-size: 0.95rem;
+  margin-right: 5rem;
 }
 
-.navbar a {
+header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Push navbar items to the right */
+  align-items: center;
+  border-top: 1px solid var(--gold-color);
+  border-bottom: 1px solid var(--gold-color);
+  padding: 0.5rem 1rem; /* Optional: add some spacing inside navbar */
+}
+
+.navbar ul {
+  display: flex; /* Layout list items in a row */
+  gap: .75rem;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 5rem;
+  list-style: none;
+}
+
+.navbar li a {
   text-decoration: none;
   color: var(--secondary-color);
-  display: block;
-  padding: 0.75rem 0;
+  font-weight: bold;
 }
 
 
@@ -61,23 +99,10 @@ img {
   object-fit: cover;
 }
 
-h2 {
-  text-align: center;
-  padding-top: 1rem;
-  color: var(--secondary-color);
-}
-
-h1 {
-  font-family: var(--headline-font);
-  text-align: center;
-  color: var(--dark-color);
-  margin-top: 0;
-}
-
 footer {
   background-color: var(--primary-color);
   padding: 1rem;
-  color: var(--text-light);
+  color: var(--secondary-color);
   text-align: center;
 }
 
